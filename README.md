@@ -2,6 +2,9 @@
 Everything needed to test some machine learning concepts in RStudio
 
 ## create docker image
+docker build -t r-ml-gpu-lite .
+
+The image created will be ~20GB in size 
 
 ## run docker container 
 docker run --rm    --gpus all   --network=host -v ~/dev:/home/rstudio/dev   --name nbt-lite  r-ml-gpu-lite
