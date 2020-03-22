@@ -7,7 +7,11 @@ docker build -t r-ml-gpu-lite .
 The image created will be ~20GB in size 
 
 ## run docker container 
+### local builds
 docker run --rm    --gpus all   --network=host -v ~/dev:/home/rstudio/dev   --name nbt-lite  r-ml-gpu-lite
+
+### docker-hub image
+docker run --rm    --gpus all   --network=host -v ~/dev:/home/rstudio/dev   --name nbt-lite  laiki/r-ml-gpu-lite
 
 ## use RStudio
 The docker image exposes the ports 8787 and 54321
