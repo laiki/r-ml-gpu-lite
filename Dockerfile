@@ -34,7 +34,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD5
 RUN apt-get install -y --no-install-recommends \
     gdebi-core && \
     wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5033-amd64.deb && \
-    gdebi -n rstudio-server-1.2.5033-amd64.deb
+    gdebi -n rstudio-server-1.2.5033-amd64.deb && \
+    rm rstudio-server-1.2.5033-amd64.deb
 
 ## automatically link a shared volume for kitematic users
 VOLUME /home/rstudio/kitematic
